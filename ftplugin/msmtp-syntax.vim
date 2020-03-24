@@ -7,11 +7,11 @@ endif
 
 if !has('gui_running')
   command! -buffer -nargs=1 Sman
-    \ silent exe '!' . 'LESS= MANPAGER="less --pattern=''\b' . <q-args> . '\b'' --hilite-search --squeeze-blank-lines" man ' . 'mbsync' |
+    \ silent exe '!' . 'LESS= MANPAGER="less --pattern=''\b' . <q-args> . '\b'' --hilite-search --squeeze-blank-lines" man ' . 'msmtp' |
     \ redraw!
 elseif has('terminal')
   command! -buffer -nargs=1 Sman
-    \ silent exe 'term ' . 'env LESS= MANPAGER="less --pattern=''\\b' . <q-args> . '\\b'' --hilite-search --squeeze-blank-lines" man ' . 'mbsync'
+    \ silent exe 'term ' . 'env LESS= MANPAGER="less --pattern=''\\b' . <q-args> . '\\b'' --hilite-search --squeeze-blank-lines" man ' . 'msmtp'
 else
   finish
 endif
